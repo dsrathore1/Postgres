@@ -1,0 +1,48 @@
+version: "3.8"
+
+volumes:
+  db_vol:
+    name: "postgres-vol"
+  pg_admin-vol:
+
+services:
+# Adminer Container
+  pg_admin:
+    image: "dpage/pgadmin4"
+    restart: "always"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PG_ADMIN_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PG_ADMIN_PWD}
+
+    env_file:
+      - .env
+    ports:
+      - "${PORT2}:80"
+    expose:
+      - "${PORT2}"
+    volumes:
+      - pg_admin-vol:/var/lib/pgadmin
+      
+# Postgres Container
+  p_db:
+    image: "postgres"
+    working_dir: /important-queries
+    ports:
+      - "${PORT}:${PORT}"
+    expose:
+      - "${PORT}"
+    volumes:
+      - db_vol:/var/lib/postgresql/data
+      - ./Query.sql:/important-queries/Query.sql
+      - ./.env:/important-queries/.env
+      - ./:/important-queries
+    environment:
+      POSTGRES_USER: ${PSQL_USER}
+      POSTGRES_PASSWORD: ${PSQL_PWD}
+      POSTGRES_DB: ${PSQL_DB}
+    stdin_open: true
+    restart: "always"
+    env_file:
+      - .env
+    depends_on:
+      - pg_admin
