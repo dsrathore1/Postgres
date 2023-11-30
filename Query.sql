@@ -1,4 +1,3 @@
--- Active: 1701163633093@@localhost@5432@test
 
 --! Create new database
 
