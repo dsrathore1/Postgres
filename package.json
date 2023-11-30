@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Connect Postgres with NodeJS server with REST API",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "test": "echo 'All tests are running good'",
     "start": "nodemon server.js"
