@@ -1,4 +1,4 @@
-<h1 algin='center'> 🐘 PostgreSQL and Node.js CRUD App 🚀 </h1>
+<h1 align='center'> 🐘 PostgreSQL and Node.js CRUD App 🚀 </h1>
 
 This repository contains the code for a simple CRUD (Create, Read, Update, Delete) application built with PostgreSQL and Node.js. The application uses Docker for running the PostgreSQL database in a container and is orchestrated using `docker-compose`. Additionally, the Node.js server is connected to the PostgreSQL database to enable CRUD operations through a RESTful API. You can manage your PostgreSQL database using PgAdmin4.
 
