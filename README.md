@@ -1,6 +1,6 @@
-<h1 align='center'> 🐘 PostgreSQL and Node.js CRUD App 🚀</h1>
+<h1 algin='center'> 🐘 PostgreSQL and Node.js CRUD App 🚀 </h1>
 
-This repository contains the code for a simple CRUD (Create, Read, Update, Delete) application built with PostgreSQL and Node.js. The application uses Docker for running the PostgreSQL database in a container and is orchestrated using `docker-compose`. Additionally, the Node.js server is connected to the PostgreSQL database to enable CRUD operations through a RESTful API.
+This repository contains the code for a simple CRUD (Create, Read, Update, Delete) application built with PostgreSQL and Node.js. The application uses Docker for running the PostgreSQL database in a container and is orchestrated using `docker-compose`. Additionally, the Node.js server is connected to the PostgreSQL database to enable CRUD operations through a RESTful API. You can manage your PostgreSQL database using PgAdmin4.
 
 ## Table of Contents 📋
 
@@ -10,6 +10,7 @@ This repository contains the code for a simple CRUD (Create, Read, Update, Delet
 - [Getting Started 🚀](#getting-started-)
 - [Docker Setup 🐳](#docker-setup-)
 - [Node.js Server 🚀](#nodejs-server-)
+- [PgAdmin4 📊](#pgadmin4-)
 - [CRUD Operations ✏️](#crud-operations-️)
 
 ## Features 🌟
@@ -19,6 +20,7 @@ This repository contains the code for a simple CRUD (Create, Read, Update, Delet
 - Node.js server for API creation
 - CRUD operations (Create, Read, Update, Delete)
 - Deployment of the Node.js application
+- Management of PostgreSQL with PgAdmin4 📊
 
 ## Prerequisites 🛠️
 
@@ -26,6 +28,7 @@ Before you begin, ensure you have the following prerequisites installed:
 
 - [Docker](https://www.docker.com/) 🐳
 - [Node.js](https://nodejs.org/) 🚀
+- [PgAdmin4](https://www.pgadmin.org/) 📊
 
 ## Getting Started 🚀
 
@@ -62,7 +65,15 @@ To start the Node.js server:
 npm start
 ```
 
-The server will be running at [http://localhost:3000](http://localhost:3001).
+The server will be running at [http://localhost:3001](http://localhost:3001).
+
+## PgAdmin4 📊
+
+PgAdmin4 is a powerful administration and management tool for the PostgreSQL database. You can access it through [http://localhost:8080](http://localhost:8080) after starting the Docker container.
+
+Use the following credentials:
+- **Username:** admin@example.com
+- **Password:** admin
 
 ## CRUD Operations ✏️
 
@@ -72,5 +83,3 @@ The API supports the following CRUD operations:
 - **Read:** `GET /api/resource`
 - **Update:** `PUT /api/resource/:id`
 - **Delete:** `DELETE /api/resource/:id`
-
-Make sure to update the API routes and database connection details in the server code according to your requirements.
